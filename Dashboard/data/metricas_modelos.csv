@@ -1,0 +1,5 @@
+modelo,exactitud,precision,recall,f1,roc_auc
+Regresion logistica (IMC + sexo) umbral 0.15,0.8101,0.2778,0.5263,0.3636,0.7462
+Regresion logistica (IMC + sexo) umbral 0.50,0.8969,0.5,0.0175,0.0339,0.7462
+Regresion logistica (solo IMC) umbral 0.15,0.8282,0.1724,0.1754,0.1739,0.6306
+Regresion logistica C=0.01 (IMC + sexo) umbral 0.15,0.8336,0.1818,0.1754,0.1786,0.6879

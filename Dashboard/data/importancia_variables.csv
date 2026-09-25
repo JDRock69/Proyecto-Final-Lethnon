@@ -1,0 +1,6 @@
+variable,importancia,modelo,odds_ratio
+imc_final,0.0844,Regresion logistica (hiperuricemia),1.0881
+sexo_bin,1.0963,Regresion logistica (hiperuricemia),2.9932
+edad,0.0383,Regresion lineal multiple (ac_urico),
+Peso,0.1911,Regresion lineal multiple (ac_urico),
+Estatura,0.2541,Regresion lineal multiple (ac_urico),

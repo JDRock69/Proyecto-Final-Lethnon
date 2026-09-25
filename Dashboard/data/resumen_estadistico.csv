@@ -1,0 +1,2 @@
+n_total,n_hiperuricemia_pos,prevalencia_hiperuricemia,r2_regresion_simple_practica2,r2_regresion_multiple,mse_regresion_multiple,media_ac_urico_exceso_peso,media_ac_urico_normal_bajo,t_stat,p_valor,cohen_d
+2549,189,0.1026,0.0347,0.1537,1.808,5.0011,4.3371,8.7901,6.6673256190249695e-18,0.4869

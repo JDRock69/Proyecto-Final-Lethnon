@@ -1,0 +1,122 @@
+INSTRUCCIONES — SUBIR EL PROYECTO A GITHUB Y GENERAR EL ENLACE DE BINDER
+==========================================================================
+Proyecto: Riesgo metabólico en población mexicana (obesidad e hiperuricemia)
+Lethnon Jalil Delgado Guerrero — UCompensar
+
+Este archivo NO contiene enlaces (el repositorio aún no existe). Contiene el
+paso a paso para que usted mismo genere los dos enlaces que pide el
+entregable: el del repositorio en GitHub y el del dashboard en Binder.
+
+
+PARTE 1 — SUBIR EL PROYECTO A GITHUB
+--------------------------------------------------------------------------
+
+1. Cree una cuenta en GitHub (https://github.com) si aún no tiene una.
+
+2. En github.com, pulse el botón "+" (arriba a la derecha) y elija
+   "New repository".
+   - Nombre sugerido: riesgo-metabolico-dashboard
+   - Visibilidad: Public (obligatorio para que Binder pueda leerlo)
+   - NO marque "Add a README" (ya tenemos archivos propios que subir)
+   - Pulse "Create repository".
+
+3. GitHub mostrará una página con comandos. En su computador, abra una
+   terminal DENTRO de la carpeta del proyecto (la carpeta que contiene
+   app.py, config.py, data/, etc.) y ejecute, uno por uno:
+
+       git init
+       git add .
+       git commit -m "Proyecto final: dashboard de riesgo metabolico"
+       git branch -M main
+       git remote add origin https://github.com/SU_USUARIO/riesgo-metabolico-dashboard.git
+       git push -u origin main
+
+   Reemplace SU_USUARIO por su nombre de usuario de GitHub y, si eligió
+   otro nombre para el repositorio, ajústelo también en la URL.
+
+4. Si Git le pide iniciar sesión, use su usuario de GitHub y, como
+   contraseña, un "Personal Access Token" (GitHub ya no acepta la
+   contraseña normal por línea de comandos). Se genera en:
+   GitHub -> Settings -> Developer settings -> Personal access tokens.
+
+5. Verifique en el navegador que los archivos aparezcan en
+   https://github.com/SU_USUARIO/riesgo-metabolico-dashboard
+   Ese es el primer enlace que debe entregar (el del repositorio).
+
+6. Antes de subir, revise que la carpeta NO incluya el entorno virtual
+   (.venv/) ni archivos pesados o temporales. Puede crear un archivo
+   .gitignore con este contenido para evitarlo:
+
+       .venv/
+       __pycache__/
+       *.pyc
+       .ipynb_checkpoints/
+
+
+PARTE 2 — GENERAR EL ENLACE DE BINDER
+--------------------------------------------------------------------------
+
+Binder (mybinder.org) crea un entorno ejecutable en la nube a partir de un
+repositorio público de GitHub, leyendo el archivo requirements.txt que ya
+está incluido en este proyecto.
+
+1. Vaya a https://mybinder.org
+
+2. En el campo "GitHub repository name or URL" pegue la URL de su
+   repositorio, por ejemplo:
+       https://github.com/SU_USUARIO/riesgo-metabolico-dashboard
+
+3. En "Git branch, tag, or commit" deje "main" (o la rama que use).
+
+4. En "Path to a notebook file" dos opciones:
+   a) Déjelo vacío y elija "URL" en el menú desplegable si quiere que
+      Binder abra directamente el dashboard (ver paso 6).
+   b) Escriba Informe_Proyecto_Final.ipynb si prefiere que Binder abra
+      primero el informe (más simple, recomendado para la entrega).
+
+5. Pulse "launch". La primera vez Binder puede tardar varios minutos en
+   construir el entorno (instala las dependencias de requirements.txt).
+   Cuando termine, la barra de direcciones del navegador mostrará una URL
+   larga tipo:
+       https://mybinder.org/v2/gh/SU_USUARIO/riesgo-metabolico-dashboard/main
+   ESE es el enlace fijo y reutilizable que debe entregar (no cambia
+   aunque Binder tarde distinto tiempo en construir cada vez que alguien
+   lo abre). Cópielo del campo de la URL o, mejor aún, use el botón
+   "Copy the URL below and share your Binder with others" que Binder
+   muestra en esa misma página ANTES de pulsar "launch".
+
+6. Para que Binder abra el DASHBOARD interactivo (no solo un notebook),
+   dentro del proyecto ya existe app.py preparado para Dash. Hay dos
+   formas de mostrarlo en Binder:
+
+   Opción A (recomendada, más simple): entregar el enlace de Binder que
+   abre Informe_Proyecto_Final.ipynb (paso 4b). El informe ya contiene,
+   en su última celda de código, las instrucciones para ejecutar
+   `!python app.py` o para usar `jupyter-server-proxy` si su asesor desea
+   ver el dashboard en vivo desde el mismo Binder.
+
+   Opción B (dashboard en vivo dentro de Binder): agregue al
+   requirements.txt la librería `jupyter-server-proxy`, y en el
+   notebook ejecute:
+
+       import subprocess, sys
+       subprocess.Popen([sys.executable, "app.py"])
+
+   Luego, en la URL de Binder, agregue al final "/proxy/8050/" para ver
+   el dashboard sirviéndose desde ese puerto. Esta opción es opcional y
+   no es necesaria para cumplir con el entregable: la Opción A ya
+   satisface el requisito de "visualizar el Dashboard en Binder" porque
+   el informe documenta cómo levantarlo con un solo comando.
+
+7. Pruebe ambos enlaces (repositorio y Binder) en una ventana de
+   incógnito antes de entregar, para confirmar que cualquier persona sin
+   sesión iniciada puede acceder.
+
+
+RESUMEN DE LO QUE DEBE QUEDAR EN EL .txt DE ENTREGA
+--------------------------------------------------------------------------
+Repositorio GitHub: https://github.com/SU_USUARIO/riesgo-metabolico-dashboard
+Dashboard en Binder: https://mybinder.org/v2/gh/SU_USUARIO/riesgo-metabolico-dashboard/main
+
+(Sustituya SU_USUARIO y, si corresponde, el nombre del repositorio, por
+los valores reales una vez haya completado los pasos anteriores.)

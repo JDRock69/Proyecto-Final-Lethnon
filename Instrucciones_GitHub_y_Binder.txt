@@ -130,4 +130,4 @@ Link Binder
 
 http://127.0.0.1:8050/
 
-https://mybinder.org/v2/gh/JDRock69/Proyecto-Final-Lethnon/proxy/8050/.git/main
+https://mybinder.org/v2/gh/JDRock69/Proyecto-Final-Lethnon.git/main

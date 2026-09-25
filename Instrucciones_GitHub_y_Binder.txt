@@ -1,3 +1,4 @@
+
 INSTRUCCIONES — SUBIR EL PROYECTO A GITHUB Y GENERAR EL ENLACE DE BINDER
 ==========================================================================
 Proyecto: Riesgo metabólico en población mexicana (obesidad e hiperuricemia)
@@ -120,3 +121,13 @@ Dashboard en Binder: https://mybinder.org/v2/gh/SU_USUARIO/riesgo-metabolico-das
 
 (Sustituya SU_USUARIO y, si corresponde, el nombre del repositorio, por
 los valores reales una vez haya completado los pasos anteriores.)
+
+Link GitHub
+
+https://github.com/JDRock69/Proyecto-Final-Lethnon.git
+
+Link Binder
+
+http://127.0.0.1:8050/
+
+https://mybinder.org/v2/gh/JDRock69/Proyecto-Final-Lethnon/proxy/8050/.git/main
